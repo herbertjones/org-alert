@@ -52,7 +52,9 @@
   "Check for active, due deadlines and initiate notifications."
   (interactive)
   ;; avoid interrupting current command.
-  (org-map-entries 'org-alert--dispatch "SCHEDULED>=\"<today>\"+SCHEDULED<\"<tomorrow>\"|DEADLINE>=\"<today>\"+DEADLINE<\"<tomorrow>\"" 'agenda
+  (org-map-entries 'org-alert--dispatch
+                   "SCHEDULED>=\"<today>\"|DEADLINE>=\"<today>\""
+                   'agenda
                    '(org-agenda-skip-entry-if 'todo org-done-keywords-for-agenda)))
 
 
