@@ -44,7 +44,7 @@
 (defvar org-alert-notification-title "*org*"
   "Title to be sent with notify-send.")
 
-(defvar org-alert-matcher "SCHEDULED>=\"<today>\"|DEADLINE>=\"<today>\""
+(defvar org-alert-matcher "SCHEDULED<=\"<today>\"|DEADLINE<=\"<today>\""
   "The tag and property matcher used to determine which entries to include as alerts from all agenda files.
 See \"Matching tags and properties\" in org mode manual.")
 
